@@ -89,9 +89,8 @@ if __name__ == '__main__':
             if x_sorted[i] != saved_x[i]:
                 Flag = False
         if Flag:
-            print "[{:03d} | {:d}] Pass".format(t, 100)
+            print("[{:03d} | {:d}] Pass".format(t, 100))
         else:
-            print "[{:03d} | {:d}] Fail".format(t, 100)
+            print("[{:03d} | {:d}] Fail".format(t, 100))
 
-
-    print "DEBUG"
+    print("DEBUG")

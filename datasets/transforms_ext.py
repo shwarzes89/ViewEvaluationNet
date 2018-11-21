@@ -7,6 +7,8 @@ import numpy as np
 import numbers
 import types
 from torchvision import transforms
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 
@@ -301,4 +303,4 @@ if __name__ == '__main__':
     # image_tensor = transforms.ToTensor()(image)
     # addGaussian = AddGaussianNoise()
     # output_image = addGaussian(image_tensor)
-    print "DB"
+    print("DB")

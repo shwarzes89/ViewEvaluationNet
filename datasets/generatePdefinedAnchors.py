@@ -1,5 +1,4 @@
 import numpy as np
-import sys, pylab
 import operator
 import csv, scipy
 import pickle
@@ -139,6 +138,6 @@ for aa in asp_ratio:
 
 anchor_crops, _ = doNMS(anchor_crops, 0.85)
 
-print len(anchor_crops)
+print(len(anchor_crops))
 with open('anchor_crops_dense.pkl', 'wb') as f:
     pickle.dump(anchor_crops, f)

@@ -1,7 +1,9 @@
 import os
 
 from PIL import Image
+import matplotlib
 
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
@@ -32,11 +34,11 @@ def viewBBoxes(image_file, bboxes, titles, showImageName=True):
         # Add the patch to the Axes
         ax.add_patch(rect_i)
     plt.show(block=False)
-    raw_input("Press Enter to continue...")
+    input("Press Enter to continue...")
     plt.close()
 
 
-annotation_path = '/home/zwei/Dev/adobe_pytorch_share0/snapshots/MTweak3-FullVGG-1024x512/MTweak3-FullVGG-1024x512.txt'
+annotation_path = '/Users/user/workspace/ViewEvaluationNet/snapshots/MTweak3-FullVGG-1024x512/MTweak3-FullVGG-1024x512.txt'
 image_path_root = getImagePath()
 
 image_data = load_utils.load_json(annotation_path)
@@ -46,5 +48,5 @@ for image_name in image_data.keys():
     scores = image_data[image_name]['scores']
     viewBBoxes(s_image_path, bboxes, scores)
 
-print "DEBUG"
+print("DEBUG")
 

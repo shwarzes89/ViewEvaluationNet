@@ -35,7 +35,7 @@ def getOutputSize(input_size, module):
 def adjust_learning_rate(optimizer, i, init_lr=0.1, every_i=4):
     """Sets the learning rate to the initial LR decayed by 10 every 30 epochs"""
     lr = init_lr * (0.1 ** (i // every_i))
-    print "Lr at epoch {:d}\t{:.08f}".format(i, lr)
+    print("Lr at epoch {:d}\t{:.08f}".format(i, lr))
     for param_group in optimizer.param_groups:
         param_group['lr'] = lr
     return lr
@@ -84,4 +84,4 @@ if __name__ == '__main__':
     # rand_image = randImage()
     # rand_image_batch = randImageBatch()
 
-    print "DBUG"
+    print("DBUG")

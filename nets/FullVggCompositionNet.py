@@ -46,8 +46,4 @@ if __name__ == '__main__':
     compNet = FullVggCompositionNet()
     test_input = Variable(test_input)
     output = compNet(test_input)
-    print "DEBUG"
-
-
-
-
+    print("DEBUG")

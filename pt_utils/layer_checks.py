@@ -35,21 +35,21 @@ def checkBNValid(net, ifPrint=True, useCuda=False):
                 running_var_np = s_module.running_var.numpy()
             if checkIfHasNan(running_mean_np):
                 if ifPrint:
-                    print "BN # {:d}  running_MEAN has NaN".format(id)
+                    print("BN # {:d}  running_MEAN has NaN".format(id))
                 isValid = False
 
             if checkIfHasInf(running_mean_np):
                 if ifPrint:
-                    print "BN # {:d}  running_MEAN has Inf".format(id)
+                    print("BN # {:d}  running_MEAN has Inf".format(id))
                 isValid = False
 
             if checkIfHasNan(running_var_np):
                 if ifPrint:
-                    print "BN # {:d}  running_Var has NaN".format(id)
+                    print("BN # {:d}  running_Var has NaN".format(id))
                 isValid = False
             if checkIfHasInf(running_var_np):
                 if ifPrint:
-                    print "BN # {:d}  running_Var has Inf".format(id)
+                    print("BN # {:d}  running_Var has Inf".format(id))
                 isValid = False
 
     return isValid
